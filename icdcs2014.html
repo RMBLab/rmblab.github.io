@@ -1,0 +1,100 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head> 
+  <meta http-equiv="Content-Language" content="en-us" >
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+   
+  <title>Towards Online, Accurate, and Robust QoS Prediction for Service Adaptation in the Cloud</title>
+
+  <link href="archive/pagestyle.css" rel="stylesheet" type="text/css">
+  <link href="archive/common-v2.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600&subset=greek,greek-ext' rel='stylesheet' type='text/css'>
+    
+</head>
+
+<body> 
+    <script type="text/javascript" src="archive/tabletop.js"></script>
+	<script type="text/javascript" src="archive/jquery.js"></script>
+
+<div> 
+	<div class="main_container">
+	  <div class="header">   
+		  <h3>Towards Online, Accurate, and Robust QoS Prediction for Service Adaptation in the Cloud</h3>
+		  <a href="../index.html" target="_blank">Jieming Zhu</a>, <a href="http://www.cse.cuhk.edu.hk/~pjhe" target="_blank">Pinjia He</a>, <a href="https://wiki.cse.cuhk.edu.hk/user/zbzheng/" target="_blank">Zibin Zheng</a>, and <a href="http://www.cse.cuhk.edu.hk/lyu/" target="_blank">Michael R. Lyu</a><br>
+		  The Chinese University of Hong Kong<br>
+	  </div>
+
+	  <div class ="page_content">
+		<h2>Introduction </h2>
+        Service adaptation is recognized as a key solution
+for cloud applications to remain resilient against the QoS variations
+of their component services, whereby QoS requirements
+can be guaranteed. To make timely and accurate adaptation
+decisions, effective QoS prediction is desired to obtain current
+QoS values of component services, but it has not been well
+studied by the previous work. To bridge this gap, we propose a novel QoS prediction approach, namely adaptive
+matrix factorization (AMF), which is inspired from the collaborative
+filtering model in recommender systems. Specifically, our
+AMF approach extends conventional matrix factorization into an
+online, accurate, and robust approach by employing techniques
+of data transformation, online learning and adaptive weights.
+To evaluate our approach, extensive experiments are conducted
+based on a real-world large-scale QoS dataset of Web services,
+and the results show the high performance of our approach in
+terms of accuracy, robustness, and efficiency. Additionally, a case
+study on a prototype application demonstrates the benefit of our
+QoS prediction approach for runtime service adaptation.
+
+		<br><br>
+		
+		<h2>Dataset </h2>
+		[<a href="../dataset/dataset_icdcs2014.zip">Download here</a>][Find more datasets: <a href="http://www.wsdream.net" target="_blank">WS-DREAM</a>] <br>
+The main goal of this dataset is to offer real-world data for future research. We have collected 4,500 Web services from the Internet. 142 distributed computers from Planet-Lab have been employed as service users to evaluate the QoS performance of Web services over 64 time slices (15 minute interval).<br><br>
+
+This data package includes:<br>
+
+1. "rtData" (492 MB): response-time values of 4,500 Web services when invoked by 142 service users over 64 time slices. The data format is as follows:<br>
+User ID&nbsp;&nbsp;&nbsp;&nbsp;Service ID&nbsp;&nbsp;&nbsp;&nbsp;Time Interval ID&nbsp;&nbsp;&nbsp;&nbsp;Response Time (s)<br> 
+e.g.: 98&nbsp;&nbsp;&nbsp;&nbsp;4352&nbsp;&nbsp;&nbsp;&nbsp;33&nbsp;&nbsp;&nbsp;&nbsp;0.311<br>
+
+2. "tpData" (585 MB): throughput values of 4,500 Web services when invoked by 142 service users over 64 time slices. The data format is as follows:<br>
+User ID&nbsp;&nbsp;&nbsp;&nbsp;Service ID&nbsp;&nbsp;&nbsp;&nbsp;Time Interval ID&nbsp;&nbsp;&nbsp;&nbsp;Throughput (kbps)<br> 
+e.g.: 91&nbsp;&nbsp;&nbsp;&nbsp;1196&nbsp;&nbsp;&nbsp;&nbsp;62&nbsp;&nbsp;&nbsp;&nbsp;32.88<br>
+
+3. "readme.txt" (2 KB): This file decribes the dataset in detail.<br><br>
+	
+		<h2>Code Release </h2>
+		The source code of our implementations on our approach (i.e., AMF) and the other compared approaches (i.e., UPCC, IPCC, UIPCC, MF) has been released. You can download the packages below.<br><br>
+		UPCC, IPCC, UIPCC: [<a href="../code/UIPCC.zip">Source code</a>]<br>
+		MF: [<a href="../code/MF.zip">Source code</a>]<br>
+		AMF: [<a href="../code/AMF.zip">Source code</a>] <br><br>
+	
+		<p style="font-size:18px"><strong>Note</strong>: Our dataset and source code are freely released for research purposes. Downloading and using the dataset and source code will indicate your acceptance to enter into a GNU General Public License agreement. Redistribution of the dataset and source code to any other third party or over the Web is not permitted.
+		</p>
+		  
+      </div>
+	  
+	  <div class="horizontal_line"></div>
+
+	  
+	  <div><div class="wsite-multicol"><div class='wsite-multicol-table-wrap' style='margin:0 -15px'>
+<table class='wsite-multicol-table'>
+<tbody class='wsite-multicol-tbody'>
+<tr class='wsite-multicol-tr'>
+
+<td class='wsite-multicol-col' style='width:33.333333333333%;padding:0 15px'>
+<div style='text-align:left; font-size: 16px;'>&copy 2013 Jamie Zhu</div>
+</td>
+
+<td class='wsite-multicol-col' style='width:35.0656167979%;padding:0 15px'>
+<div align="right" style="width: 100%; overflow-y: hidden; font-size: 16px;" class="wcustomhtml">Last updated: Dec. 5, 2013</div>
+</td>
+
+</tr>
+</tbody>
+</table>
+  
+</div>
+
+</body></html>
