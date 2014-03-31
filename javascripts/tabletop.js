@@ -405,3 +405,28 @@
   };
 
 })(typeof process === 'undefined' ? this : module.exports);
+
+/*
+  Define by jimzhu@GitHub
+*/
+function loadgdoc(keyValue, sheetName) {
+	Tabletop({
+		key: keyValue,
+		callback: function showInfo(data, tabletop) {  
+				var publist;
+				$.each( tabletop.sheets(sheetName).all(), function(i, pub) {
+				  if(i%2 == 0)
+					publist = $('<tr class="papersListRow">')
+				  else
+					publist = $('<tr class="paperListAlternatingRow">')
+				  publist.append('<td>' + pub.id + '</td><td>' + pub.year + '</td><td>' + pub.conferencejournal + '</td><td class="paperListTitle">' + pub.paper + '</td><td>' + pub.author + '</td><td>' + pub.note + '</td></tr>')        
+				  publist.appendTo("#paperarchive");
+				})          
+			},
+		wanted: [sheetName]
+	});
+}
+
+
+
+
